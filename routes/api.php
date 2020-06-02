@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Person;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,6 +15,4 @@ use App\Person;
 |
 */
 
-Route::get('/person/{personId}', function(Person $personId){
-    return $personId;
-});
+Route::get('/person/{personId}', 'PersonController@show');
