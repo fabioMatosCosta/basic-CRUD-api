@@ -15,4 +15,4 @@ use App\Person;
 |
 */
 
-Route::get('/person/{personId}', 'PersonController@show');
+Route::apiResource('/person', 'PersonController');
