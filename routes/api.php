@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Person;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/person', function(){
-    $person = [
-        'first_name' => 'John',
-        'last_name' => 'Doe'
-    ];
-    return $person;     
+Route::get('/person/{personId}', function(Person $personId){
+    return $personId;
 });
