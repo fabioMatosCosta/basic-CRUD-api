@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/person', function(){
+    $person = [
+        'first_name' => 'John',
+        'last_name' => 'Doe'
+    ];
+    return $person;     
 });
