@@ -15,4 +15,6 @@ use App\Person;
 |
 */
 
-Route::apiResource('/person', 'PersonController');
+// Route::prefix('v1')->group(function(){
+    Route::apiResource('/person', 'Api\v1\PersonController');
+// });
